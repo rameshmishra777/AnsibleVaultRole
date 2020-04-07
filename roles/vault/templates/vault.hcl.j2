@@ -1,8 +1,5 @@
-storage "s3" {
-  access_key = "ACCESS_KEY_HERE"
-  secret_key = "SECRET_KEY_HERE"
-  bucket     = "vault-secret"
-  region	 = "us-east-2"
+storage "file" {
+  path = "/mnt/data"
 }
 
 listener "tcp" {
