@@ -5,8 +5,8 @@ After=network.target
 ConditionFileNotEmpty=/etc/vault.hcl
 
 [Service]
-User=vault
-Group=vault
+User=root
+Group=root
 ExecStart=/usr/local/bin/vault server -config=/etc/vault.hcl
 ExecReload=/usr/local/bin/kill --signal HUP $MAINPID
 CapabilityBoundingSet=CAP_SYSLOG CAP_IPC_LOCK
